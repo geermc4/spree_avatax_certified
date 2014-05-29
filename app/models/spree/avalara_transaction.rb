@@ -86,6 +86,18 @@ module Spree
       end
     end
 
+    def compute_amount(adjustable)
+     binding.pry
+     logger = Logger.new('log/post_order_to_avalara.txt', 'weekly')
+
+     #logger.level = :debug
+
+     logger.progname = 'avalara_transaction'
+
+     logger.info 'compute amount call'
+     post_order_to_avalara(false, order.line_items, order)
+     return rnt_tax
+    end
 
 
 
