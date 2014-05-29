@@ -62,8 +62,8 @@ Spree::Order.class_eval do
     logger.info 'tax amount'
     logger.debug rtn_tax
     adjustments.create do |adjustment|
-      adjustment.source = self
-      adjustment.adjustable = avalara_transaction
+      adjustment.source = avalara_transaction #self
+      #adjustment.adjustable = avalara_transaction
       adjustment.label = 'Tax'
       adjustment.mandatory = true
       adjustment.eligible = true
@@ -89,8 +89,8 @@ Spree::Order.class_eval do
       logger.info 'tax amount'
       logger.debug rtn_tax
       adjustments.create do |adjustment|
-        adjustment.source = self
-        adjustment.adjustable = avalara_transaction
+        adjustment.source = avalara_transaction #self
+        #adjustment.adjustable = avalara_transaction
         adjustment.label = 'Tax'
         adjustment.mandatory = true
         adjustment.eligible = true
