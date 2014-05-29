@@ -12,7 +12,7 @@ test/tmp
 test/version_tmp
 tmp
 .idea/
-*.idea
+.idea
 */*.idea
 # YARD artifacts
 .yardoc
