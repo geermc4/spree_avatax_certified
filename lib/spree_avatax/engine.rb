@@ -5,6 +5,7 @@ module SpreeAvatax
     engine_name 'spree_avatax'
 
     config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths+=%W(#{config.root}/app/models)
 
     # use rspec for tests
     config.generators do |g|
