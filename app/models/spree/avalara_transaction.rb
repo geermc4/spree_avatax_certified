@@ -37,7 +37,7 @@ module Spree
         if invoice_dt == "ReturnInvoice"
           post_return_order_to_avalara(true, items, order_details, doc_id, org_ord_date,invoice_dt)
         else
-          post_order_to_avalara(true, items, order_details, doc_id, org_ord_date,invoice_dt)
+          post_order_to_avalara(false, items, order_details, doc_id, org_ord_date,invoice_dt)
         end
       else
         AVALARA_TRANSACTION_LOGGER.debug "avalara document committing disabled"
